@@ -16,7 +16,6 @@ source(file.path(modules_path, "screener_module.R"))
 source(file.path(modules_path, "portfolio_module.R"))
 source(file.path(modules_path, "buffett_module.R"))
 source(file.path(modules_path, "settings_module.R"))
-
 # ----------------------------------------------------------
 # 2. UI
 # ----------------------------------------------------------
