@@ -1,140 +1,57 @@
-README.md (Copy–Paste Ready)
-# stockappraghav 📈  
-**A Modular R Package + Shiny App for Indian Stock Market Analytics**
 
-`stockappraghav` is a personal project by Vishnu S. Raghavan that integrates:
+<!-- badges: start -->
 
-- Live NSE fundamentals  
-- Yahoo Finance price data  
-- Modular Shiny dashboards  
-- Screeners  
-- Buffett-style valuation  
-- Portfolio analytics  
+[![R-CMD-check](https://github.com/raghavanvishnu/stockappraghav/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/raghavanvishnu/stockappraghav/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
+<!-- README.md is generated from README.Rmd. Please edit that file -->
 
-The app is built using a clean R package architecture, with the full Shiny application stored under `inst/shiny/stockApp/`.
+# stockappraghav
 
----
+<!-- badges: start -->
 
-## 🚀 Features (Work in Progress)
+<!-- badges: end -->
 
-### ✔ NSE Fundamentals  
-Fetch live market data directly from NSE India using the public JSON API:
+The goal of stockappraghav is to …
 
-- Last price  
-- Day high/low  
-- 52-week high/low  
-- P/E, Industry P/E  
-- EPS  
-- Book value  
-- Dividend yield  
-- Beta  
-- Market cap  
+## Installation
 
-### ✔ Modular Shiny Architecture  
-Each module has separate UI/server files:
+You can install the development version of stockappraghav from
+[GitHub](https://github.com/) with:
 
+``` r
+# install.packages("pak")
+pak::pak("raghavanvishnu/stockappraghav")
+```
 
+## Example
 
-inst/shiny/stockApp/modules/
-├─ dashboard_module.R
-├─ stock_explorer_module.R
-├─ fundamentals_module.R
-├─ screener_module.R
-├─ portfolio_module.R
-├─ buffett_module.R
-└─ settings_module.R
+This is a basic example which shows you how to solve a common problem:
 
-
-### ✔ Stock Explorer (coming soon)  
-- Candlestick chart  
-- Volume bars  
-- SMA / EMA  
-- RSI / MACD  
-
-### ✔ Screener (coming soon)  
-Filter stocks by:
-
-- PE  
-- ROE  
-- ROCE  
-- Market cap  
-- Zero-debt  
-
-### ✔ Buffett Analysis (coming soon)  
-- Intrinsic value  
-- Discount rate  
-- Margin of safety  
-
----
-
-## 📦 Installation (development version)
-
-```r
-# install.packages("devtools")
-devtools::install_github("raghavanvishnu/stockappraghav")
-
-🧪 Example: Fetch NSE Fundamentals
+``` r
 library(stockappraghav)
+## basic example code
+```
 
-get_nse_fundamentals("RELIANCE")
-get_nse_fundamentals("ASIANPAINT")
+What is special about using `README.Rmd` instead of just `README.md`?
+You can include R chunks like so:
 
+``` r
+summary(cars)
+#>      speed           dist       
+#>  Min.   : 4.0   Min.   :  2.00  
+#>  1st Qu.:12.0   1st Qu.: 26.00  
+#>  Median :15.0   Median : 36.00  
+#>  Mean   :15.4   Mean   : 42.98  
+#>  3rd Qu.:19.0   3rd Qu.: 56.00  
+#>  Max.   :25.0   Max.   :120.00
+```
 
-Returns a tidy tibble:
+You’ll still need to render `README.Rmd` regularly, to keep `README.md`
+up-to-date. `devtools::build_readme()` is handy for this.
 
-# A tibble: 1 × 18
-  symbol companyName industry lastPrice pe eps bookValue dividendYield …
+You can also embed plots, for example:
 
-🖥 Running the Shiny App
+<img src="man/figures/README-pressure-1.png" width="100%" />
 
-After installing the package:
-
-library(stockappraghav)
-shiny::runApp(system.file("shiny/stockApp", package = "stockappraghav"))
-
-
-This loads the full multi-tab Shiny dashboard.
-
-📁 Project Structure
-stockappraghav/
-  ├─ R/                      # Core R functions
-  ├─ inst/shiny/stockApp/    # Full Shiny application
-  │     ├─ app.R
-  │     └─ modules/
-  ├─ DESCRIPTION
-  ├─ NAMESPACE
-  ├─ tests/
-  ├─ vignettes/
-  └─ README.md
-
-🛠 Development Workflow
-
-Main branch:
-
-Stable, production-ready code
-
-Feature branches:
-
-feature-fundamentals-ui
-
-feature-stock-explorer
-
-feature-screener
-
-feature-buffett
-
-feature-portfolio
-
-🧑‍💻 Author
-
-Vishnu S. Raghavan
-R Developer | Data Scientist | Stock Market Enthusiast
-
-📜 License
-
-MIT License (to be added).
-
-⚠ Disclaimer
-
-This project is for personal and educational purposes only.
-Not intended for financial advice or commercial use.
+In that case, don’t forget to commit and push the resulting figure
+files, so they display on GitHub and CRAN.
