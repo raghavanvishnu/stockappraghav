@@ -23,22 +23,11 @@ RoxygenNote: 7.3.3
 URL: https://github.com/raghavanvishnu/stockappraghav
 BugReports: https://github.com/raghavanvishnu/stockappraghav/issues
 Imports:
-    shiny,
-    bslib,
     httr,
     jsonlite,
-    dplyr,
-    purrr,
     tibble,
-    ggplot2,
-    rvest,
-    lubridate,
-    tidyr,
-    readr,
-    stringr,
-    memoise,
+    dplyr,
     magrittr,
-    utils,
     stats
 Suggests:
     testthat (>= 3.0.0),
